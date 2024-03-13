@@ -9,28 +9,27 @@
          table {
                 border-collapse: collapse;
                 width: 100%;
-                background-image: url('https://universitykart.b-cdn.net/Content/upload/admin/b45hrgnr.dkf.jpg');
-                background-repeat: no-repeat;
-                background-size: 100% 100%; /* Ensure the image covers the entire table */
             }
  
-  
+  	
          .desc, 
          .header { 
              text-align: center; 
              align-items: center; 
              padding: 20px; 
+             
          } 
-  
+         
          .header { 
-             background-color: rgb(232, 10, 10); 
-             color: white; 
+             background-color: white; 
+             color: black; 
          } 
   
          th { 
-             background-color: gray; 
+             background-color: black; 
              color: white; 
              border: solid 1px black; 
+             text-align: center; 
          } 
   
          td { 
@@ -39,17 +38,37 @@
          } 
   
          .footer { 
-             background-color: gray; 
+             background-color: black; 
              color: white; 
              text-align: center; 
          } 
+         #img1{
+         float: left; 
+         width: 200px;  
+         }
+         #img2{
+         float: right; 
+         width: 250px;  
+         }
      </style> 
  </head> 
   
  <body> 
+ 	
      <div class="header"> 
-         <h1>JSS Science and Technology University</h1><br><br> 
-     </div> 
+     <div id="logo">
+       <div>
+    	    <img src="https://img.collegepravesh.com/2018/10/SJCE-Mysore-Logo.png" id="img1" alt="logo" />
+       </div>  
+       <div>
+    	    <img src="https://jssstuniv.in/assets/img/logo/jssstulogo.png" id= "img2" alt="logo" />
+       </div>
+      </div>
+         <h1>JSS Science and Technology University</h1>
+         <br><br>
+         </div>
+         <hr>
+         <hr>
      <div class="desc"> 
          <h2>Computer Science and Engineering</h2> 
          <h3>TIMETABLE FOR ACADEMIC YEAR 2024 (EVEN SEMESTER)</h3> 
@@ -248,8 +267,10 @@
              </tr> 
          </tbody> 
      </table><br><br> 
-     <div class="footer"> 
+     <div class="footer"> <br><br>
+     <span><h4>&copy jssstu</h4></span>
          <p>JSS Science And Technology University</p> 
+         <br><br>
      </div> 
  </body> 
   
