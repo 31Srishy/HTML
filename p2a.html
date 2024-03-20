@@ -26,7 +26,7 @@
 <body>
     <div class="container">
         <h2 style="text-align:center;">Student Feedback Form</h2>
-        <form action="#" method="POST">
+        <form action="tnx.html" method="POST">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required><br><br>
 
@@ -59,8 +59,11 @@
             <input type="radio" id="ece" name="branch" value="ECE">
             <label for="ece">ECE</label><br>
 
-            <input type="radio" id="me" name="branch" value="ME">
-            <label for="me">ME</label><br><br><br>
+            <input type="radio" id="ee" name="branch" value="EEE">
+            <label for="ee">EEE</label><br>
+            
+            <input type="radio" id="ncb" name="branch" value="ncb">
+            <label for="ncb">Non Circuit branch</label><br><br><br>
 
             <label for="feedback">Feedback:</label><br>
             <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea><br><br>
@@ -80,8 +83,12 @@
 
             <label for="improvements">Suggestions for improvements:</label><br>
             <textarea id="improvements" name="improvements" rows="4" cols="50"></textarea><br><br>
+            
+            <input type="checkbox" id="r1" name="r1" value="r1">
+   	    <label for="r1"> You will receive a response on this email</label><br><br>
 
-            <input type="submit" value="Submit">
+            <input type="Submit" value="Submit">
+	    
         </form>
     </div>
 </body>
