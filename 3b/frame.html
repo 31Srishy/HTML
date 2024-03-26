@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Webpage with 4 frames</title>
+</head>
+<frameset cols="50%, 50%">
+  <frameset rows="50%, 50%">
+    <frame src="frame1.html" name="tl">
+    <frame src="frame2.html" name="bl">
+  </frameset>
+  <frameset rows="50%, 50%">
+    <frame src="frame3.html" name="tr">
+    <frame src="frame4.html" name="br">
+  </frameset>
+  <noframes>
+    <body>
+      Your Browser does not support frames.
+    </body>
+  </noframes>
+</frameset>
+</html>
