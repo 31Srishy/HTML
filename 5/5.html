@@ -16,9 +16,9 @@
 
         /* Control the repetition of image with background-repeat property */
         body {
-            background-image: url('https://miro.medium.com/v2/resize:fit:1358/1*bq8x2rFSbkoK2Bj6FECt2g.png');
-            background-repeat: no-repeat;
-            background-size: cover;
+            background-image: url('https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?size=626&ext=jpg&ga=GA1.1.1700460183.1712124000&semt=sph');
+            background-repeat: repeat;
+            background-size: 50%;
             background-position: center;
         }
 
@@ -42,8 +42,11 @@
 
         /* Demonstrate Element visibility property */
         .hidden-element {
-            display: none;
+           visibility: hidden;
         }
+         img:hover + .hidden-element {
+    		visibility: visible;
+  	}
     </style>
 </head>
 <body>
@@ -64,6 +67,7 @@
 
     <h1>Element Visibility Property</h1>
     <p>This element is initially hidden.</p>
+    <img src="https://miro.medium.com/v2/resize:fit:1358/1*bq8x2rFSbkoK2Bj6FECt2g.png" width=400px style="cursor:pointer;" />
     <p class="hidden-element">Now you see me!</p>
 </body>
 </html>
