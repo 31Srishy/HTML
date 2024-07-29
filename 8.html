@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Test Marks Calculator</title>
+    <style type="text/css">
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    form {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"] {
+        width: calc(100% - 10px);
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+    </style>
+    <script type="text/javascript">
+        function calculateAverage() {
+            // Retrieve input values
+            var registerNumber = document.getElementById("registerNumber").value;
+            var subCode = document.getElementById("subCode").value;
+            var test1 = parseFloat(document.getElementById("test1").value);
+            var test2 = parseFloat(document.getElementById("test2").value);
+            var test3 = parseFloat(document.getElementById("test3").value);
+
+            // Validate input
+            if (!registerNumber || !subCode || isNaN(test1) || isNaN(test2) || isNaN(test3)) {
+                alert("Please fill in all fields with valid data.");
+                return;
+            }
+
+            // Calculate average of two best tests
+            var average = (test1 + test2 + test3 - Math.min(test1, test2, test3)) / 2;
+
+            // Display average
+            alert("Average marks for Register Number " + registerNumber + ", Sub-code " + subCode + ": " + average);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Test Marks Calculator</h2>
+        <form>
+            <label for="registerNumber">Register Number:</label><br />
+            <input type="text" id="registerNumber" name="registerNumber" /><br />
+
+            <label for="subCode">Sub-code:</label><br />
+            <input type="text" id="subCode" name="subCode" /><br />
+
+            <label for="test1">Test 1 Marks:</label><br />
+            <input type="text" id="test1" name="test1" /><br />
+
+            <label for="test2">Test 2 Marks:</label><br />
+            <input type="text" id="test2" name="test2" /><br />
+
+            <label for="test3">Test 3 Marks:</label><br />
+            <input type="text" id="test3" name="test3" /><br />
+
+            <button type="button" onclick="calculateAverage()">Calculate Average</button>
+        </form>
+    </div>
+</body>
+</html>

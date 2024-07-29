@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Form Validation and Display</title>
+ <style>
+ input[type="text"], input[type="email"], select { 
+ width: 100%; 
+ padding: 10px; 
+ margin: 5px 0; 
+ box-sizing: border-box; 
+ } 
+ button { 
+ background-color: #2c12f0; 
+ color: rgb(233, 223, 223); 
+ padding: 15px; 
+ border: none; 
+ cursor: pointer; 
+ width: 100%; 
+ } 
+ button:hover { 
+ background-color: #734eed; 
+ } 
+ .container { 
+ margin: 50px auto; /* Centering the container */
+ padding: 20px; 
+ border: 2px solid black; /* Adding border around the form */
+ width: 60%; /* Setting width of the form */
+ border-radius: 5px; 
+ background-color: #ead3d375; 
+ padding: 20px; 
+ margin-top: 20px; 
+ } 
+ </style>
+</head>
+<body>
+<div class="container">
+ <h2>Form Validation and Display</h2>
+ <form id="myForm">
+ <label for="name">Name:</label>
+ <input type="text" id="name" name="name" placeholder="Your 
+name.."><br><br>
+ <label for="email">Email:</label>
+ <input type="email" id="email" name="email" placeholder="Your 
+email.."><br><br>
+ <label for="mobile">Mobile No:</label>
+ <input type="text" id="mobile" name="mobile" placeholder="Your mobile 
+number.."><br><br>
+ <label for="gender">Gender:</label>
+ <select id="gender" name="gender">
+ <option value="">Select Gender</option>
+ <option value="male">Male</option>
+ <option value="female">Female</option>
+ <option value="other">Other</option>
+ </select><br><br>
+ <label for="color">Favorite Color:</label>
+ <input type="color" id="color" name="color"><br><br>
+ <button type="button" onclick="validateForm()">Submit</button><br><br>
+ </form>
+</div>
+<div class="container">
+ <h2>Form Data</h2>
+ <textarea id="formData" rows="12" cols="98"></textarea>
+</div>
+<script>
+ function validateForm() { 
+ var name = document.getElementById("name").value.trim(); 
+ var email = document.getElementById("email").value.trim(); 
+ var mobile = document.getElementById("mobile").value.trim(); 
+ var gender = document.getElementById("gender").value; 
+ var color = document.getElementById("color").value; 
+ if (name === '' || email === '' || mobile === '' || gender === '' || 
+color === '') { 
+ alert("Please fill in all fields."); 
+ return; 
+ } 
+ var mobilePattern = /^[0-9]{10}$/; 
+ if (!mobilePattern.test(mobile)) { 
+ alert("Please enter a valid 10-digit mobile number."); 
+ return; 
+ } 
+ var formData = "Name: " + name + "\n"; 
+ formData += "Email: " + email + "\n"; 
+ formData += "Mobile No: " + mobile + "\n"; 
+ formData += "Gender: " + gender + "\n"; 
+ formData += "Favorite Color: " + color; 
+ document.getElementById("formData").value = formData; 
+ } 
+</script>
+</body>
+</html>

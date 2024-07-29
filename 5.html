@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Styles</title>
+    <style>
+        /* Different font styles */
+        h1 {
+            font-family: Arial, sans-serif;
+        }
+
+        p {
+            font-family: Georgia, serif;
+        }
+
+        /* Control the repetition of image with background-repeat property */
+        body {
+            background-image: url('https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?size=626&ext=jpg&ga=GA1.1.1700460183.1712124000&semt=sph');
+            background-repeat: repeat;
+            background-size: 50%;
+            background-position: center;
+        }
+
+        /* Define style for links */
+        a:link {
+            color: blue;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a:visited {
+            color: purple;
+        }
+
+        a:active {
+            color: red;
+        }
+
+        /* Demonstrate Element visibility property */
+        .hidden-element {
+           visibility: hidden;
+        }
+         img:hover + .hidden-element {
+    		visibility: visible;
+  	}
+    </style>
+</head>
+<body>
+    <h1>Different Font Styles</h1>
+    <p>This paragraph demonstrates the use of different font styles.</p>
+
+    <h1>Background Image with Background-Repeat</h1>
+    <p>This background image demonstrates the use of the background-repeat property. It's set to no-repeat.</p>
+
+    <h1>Styled Links</h1>
+    <p>
+        <ul>
+            <li><a href="https://www.mapsofindia.com/my-india/travel/top-10-natural-disasters-in-the-history-of-india" target="content">Natural Top-10-natural-disasters-in-the-history-of-india</a></li>
+            <li><a href="https://www.worldatlas.com/places/the-7-natural-wonders-of-the-world.html" target="content">The 7 Natural Wonders Of The World</a></li>
+            <li><a href="https://www.wwf.org.uk/thingsyoucando" target="content">10 THINGS YOU CAN DO TO HELP SAVE OUR PLANET</a></li>
+        </ul>
+    </p>
+
+    <h1>Element Visibility Property</h1>
+    <p>This element is initially hidden.</p>
+    <img src="https://miro.medium.com/v2/resize:fit:1358/1*bq8x2rFSbkoK2Bj6FECt2g.png" width=400px style="cursor:pointer;" />
+    <p class="hidden-element">Now you see me!</p>
+</body>
+</html>
